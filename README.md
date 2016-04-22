@@ -1,4 +1,4 @@
-![Slush React Start](logo.png)
+![Slush React Start](https://github.com/afonsopacifer/slush-react-start/blob/master/logo.png)
 
 # Slush React Start
 
@@ -30,6 +30,23 @@ Answer the questions!
 
 > React + Browserify
 
+Syntax:
+
+```js
+var React    = require('react'),
+    ReactDOM = require('react-dom');
+
+var Layout = React.createClass({
+  render: function(){
+    return (
+        <h1>Hello</h1>
+    )
+  }
+});
+
+ReactDom.render(<Layout/>, document.getElementById('app'));
+```
+
 Folders structure:
 
 	.
@@ -49,6 +66,23 @@ $ npm start
 ## If your choice ES6:
 
 > React + Webpack + Babel
+
+Syntax:
+
+```js
+import React from "react";
+import ReactDom from "react-dom";
+
+class Layout extends React.Component {
+  render() {
+    return (
+      <h1>Hello</h1>
+    );
+  }
+};
+
+ReactDom.render(<Layout/>, document.getElementById('app'));
+```
 
 Folders structure:
 
