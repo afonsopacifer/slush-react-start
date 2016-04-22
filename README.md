@@ -30,6 +30,13 @@ Answer the questions!
 
 > React + Browserify
 
+Requirements:
+
+```sh
+$ npm i -g browserify
+$ npm i -g watchify
+```
+
 Syntax:
 
 ```js
@@ -54,7 +61,8 @@ Folders structure:
 	├── package.json
 	├── src/
 	|   ├── index.html
-	|   └── app.js
+	|   ├── app.js
+	|   └── bundle.js
 	└── .gitignore
 
 Run your project:
@@ -63,9 +71,17 @@ Run your project:
 $ npm start
 ```
 
+PS: Do not forget to run a simple server ;)
+
 ## If your choice ES6:
 
 > React + Webpack + Babel
+
+Requirements:
+
+```sh
+$ npm install -g webpack
+```
 
 Syntax:
 

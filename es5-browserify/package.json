@@ -1,0 +1,17 @@
+{
+  "name": "<%= appNameSlug %>",
+  "version": "<%= appVersion %>",
+  "description": "<%= appDescription %>",
+  "author": {
+    "name": "<%= appAuthor %>",
+    "email": "<%= appEmail %>"
+  },
+  "scripts": {
+    "start": "watchify -t reactify src/app.js -o src/bundle.js"
+  },
+  "devDependencies": {
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "reactify": "^1.1.1"
+  }
+}
