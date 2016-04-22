@@ -26,7 +26,7 @@ $ slush react-start
 
 Answer the questions!
 
-## If your choice ES5:
+## If your choice is ES5:
 
 > React + Browserify
 
@@ -73,7 +73,7 @@ $ npm start
 
 PS: Do not forget to run a simple server ;)
 
-## If your choice ES6:
+## If your choice is ES6:
 
 > React + Webpack + Babel
 
