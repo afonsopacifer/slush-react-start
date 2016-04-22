@@ -73,7 +73,7 @@ Run your project:
 $ npm start
 ```
 
-PS: Do not forget to run a simple server ;)
+Go to: `http://localhost:5000`
 
 ## If your choice is ES6:
 
