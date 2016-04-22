@@ -40,7 +40,6 @@ gulp.task('default', function(done) {
                 return done();
             }
             var ecmaVersion = (answers.es === 'es6') ? 'es6-webpack' : 'es5-browserify';
-            console.log(ecmaVersion);
             answers.appNameSlug = _.slugify(answers.appName)
             answers.appAuthorSlug = _.slugify(answers.appAuthor)
             gulp.src(__dirname + '/' + ecmaVersion + '/**')
