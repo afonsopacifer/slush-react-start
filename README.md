@@ -24,7 +24,9 @@ Use the generator:
 $ slush react-start
 ```
 
-Answer the questions!
+Choose your javascript version for  and answer the questions!
+
+![choose](choose.png)
 
 ## If your choice is ES5:
 
