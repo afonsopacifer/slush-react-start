@@ -33,8 +33,8 @@ Answer the questions!
 Requirements:
 
 ```sh
-$ npm i -g browserify
-$ npm i -g watchify
+$ [sudo] npm install -g browserify
+$ [sudo] npm install -g watchify
 ```
 
 Syntax:
@@ -80,7 +80,7 @@ PS: Do not forget to run a simple server ;)
 Requirements:
 
 ```sh
-$ npm install -g webpack
+$ [sudo] npm install -g webpack
 ```
 
 Syntax:
