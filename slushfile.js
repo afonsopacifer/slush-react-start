@@ -14,7 +14,19 @@ gulp.task('default', function(done) {
     var prompts = [{
         name: 'es',
         message: 'What the version of javascript?',
-        default: 'es6'
+        type: 'list',
+            choices: [
+            {
+                key: 'a',
+                name: 'ES6/ES2015',
+                value: 'es6-webpack'
+            },
+            {
+                key: 'b',
+                name: 'ES5',
+                value: 'es5-browserify'
+            }
+        ]
     }, {
         name: 'appName',
         message: 'What the name of project?'
@@ -39,10 +51,9 @@ gulp.task('default', function(done) {
             if (!answers.appName) {
                 return done();
             }
-            var ecmaVersion = (answers.es === 'es6') ? 'es6-webpack' : 'es5-browserify';
             answers.appNameSlug = _.slugify(answers.appName)
             answers.appAuthorSlug = _.slugify(answers.appAuthor)
-            gulp.src(__dirname + '/' + ecmaVersion + '/**')
+            gulp.src(__dirname + '/' + answers.es + '/**')
                 .pipe(template(answers))
                 .pipe(rename(function(file) {
                     if (file.basename[0] === '_') {
