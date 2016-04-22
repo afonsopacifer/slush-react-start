@@ -24,7 +24,7 @@ Use the generator:
 $ slush react-start
 ```
 
-Choose your javascript version for  and answer the questions!
+Choose your javascript version and answer the questions!
 
 ![choose](choose.png)
 
@@ -128,7 +128,7 @@ To keep better organization of releases we follow the [Semantic Versioning 2.0.0
 
 ## Contributing
 
-Find on our [roadmap](https://github.com/afonsopacifer/slush-react-start/issues/1) the next steps of the project ;)
+Find on our [issues](https://github.com/afonsopacifer/slush-react-start/issues/) to see the next steps of the project ;)
 <br>
 Want to contribute? [Follow these recommendations](https://github.com/afonsopacifer/slush-react-start/blob/master/CONTRIBUTING.md).
 
