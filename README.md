@@ -89,8 +89,10 @@ Folders structure:
 	.
 	├── README.md
 	├── package.json
+	├── webpack.config.js
 	├── src/
 	|   ├── index.html
+	|   ├── app.min.js
 	|   └── app.js
 	└── .gitignore
 
@@ -99,6 +101,8 @@ Run your project:
 ```sh
 $ npm start
 ```
+
+Go to: `http://localhost:8080/`
 
 ## Versioning
 
