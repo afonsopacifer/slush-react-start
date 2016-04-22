@@ -39,38 +39,21 @@ gulp.task('default', function(done) {
             if (!answers.appName) {
                 return done();
             }
-            if (answers.es === "es5") {
-              answers.appNameSlug = _.slugify(answers.appName)
-              answers.appAuthorSlug = _.slugify(answers.appAuthor)
-              gulp.src(__dirname + '/es5-browserify/**')
-                  .pipe(template(answers))
-                  .pipe(rename(function(file) {
-                      if (file.basename[0] === '_') {
-                          file.basename = '.' + file.basename.slice(1);
-                      }
-                  }))
-                  .pipe(conflict('./'))
-                  .pipe(gulp.dest('./'))
-                  .pipe(install())
-                  .on('end', function() {
-                      done();
-                  });
-            } else if (answers.es === "es6"){
-              answers.appNameSlug = _.slugify(answers.appName)
-              answers.appAuthorSlug = _.slugify(answers.appAuthor)
-              gulp.src(__dirname + '/es6-webpack/**')
-                  .pipe(template(answers))
-                  .pipe(rename(function(file) {
-                      if (file.basename[0] === '_') {
-                          file.basename = '.' + file.basename.slice(1);
-                      }
-                  }))
-                  .pipe(conflict('./'))
-                  .pipe(gulp.dest('./'))
-                  .pipe(install())
-                  .on('end', function() {
-                      done();
-                  });
-            }
+            var ecmaVersion = (answers.es === 'es6') ? 'es6-webpack' : 'es5-browserify';
+            answers.appNameSlug = _.slugify(answers.appName)
+            answers.appAuthorSlug = _.slugify(answers.appAuthor)
+            gulp.src(__dirname + '/' + ecmaVersion + '/**')
+                .pipe(template(answers))
+                .pipe(rename(function(file) {
+                    if (file.basename[0] === '_') {
+                        file.basename = '.' + file.basename.slice(1);
+                    }
+                }))
+                .pipe(conflict('./'))
+                .pipe(gulp.dest('./'))
+                .pipe(install())
+                .on('end', function() {
+                    done();
+                });
         });
 });
