@@ -73,7 +73,7 @@ Run your project:
 $ npm start
 ```
 
-Open `[http://localhost:5000](http://localhost:5000)` in your browser =] 
+Go to: `http://localhost:5000`
 
 ## If your choice is ES6:
 
