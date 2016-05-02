@@ -53,7 +53,7 @@ var Layout = React.createClass({
   }
 });
 
-ReactDom.render(<Layout/>, document.getElementById('app'));
+ReactDOM.render(<Layout/>, document.getElementById('app'));
 ```
 
 Folders structure:
