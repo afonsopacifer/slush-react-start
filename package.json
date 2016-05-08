@@ -1,6 +1,6 @@
 {
   "name": "slush-react-start",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Generator for React + ES5 (Browserify) or ES6 (Webpack/Babel)",
   "main": "slushfile.js",
   "keywords": [
