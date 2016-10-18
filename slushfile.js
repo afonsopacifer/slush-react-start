@@ -53,7 +53,7 @@ gulp.task('default', function(done) {
             }
             answers.appNameSlug = _.slugify(answers.appName)
             answers.appAuthorSlug = _.slugify(answers.appAuthor)
-            gulp.src(__dirname + '/' + answers.es + '/**')
+            gulp.src(__dirname + '/src/' + answers.es + '/**')
                 .pipe(template(answers))
                 .pipe(rename(function(file) {
                     if (file.basename[0] === '_') {

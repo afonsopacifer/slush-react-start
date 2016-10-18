@@ -6,6 +6,10 @@
   "keywords": [
     "slushgenerator"
   ],
+  "scripts": {
+    "test": "NODE_ENV=test mocha -R spec test/*_test.js",
+    "preversion": "npm test"
+  },
   "dependencies": {
     "gulp": "~3.5.6",
     "gulp-template": "~0.1.1",
