@@ -46,25 +46,26 @@ gulp.task('default', function(done) {
     }];
 
     //Ask
-    inquirer.prompt(prompts,
-        function(answers) {
-            if (!answers.appName) {
-                return done();
-            }
-            answers.appNameSlug = _.slugify(answers.appName)
-            answers.appAuthorSlug = _.slugify(answers.appAuthor)
-            gulp.src(__dirname + '/src/' + answers.es + '/**')
-                .pipe(template(answers))
-                .pipe(rename(function(file) {
-                    if (file.basename[0] === '_') {
-                        file.basename = '.' + file.basename.slice(1);
-                    }
-                }))
-                .pipe(conflict('./'))
-                .pipe(gulp.dest('./'))
-                .pipe(install())
-                .on('end', function() {
-                    done();
-                });
-        });
+    inquirer.prompt(prompts).then(answers => {
+        if (!answers.appName) {
+            return done();
+        }
+
+        answers.appNameSlug = _.slugify(answers.appName)
+        answers.appAuthorSlug = _.slugify(answers.appAuthor)
+        gulp.src(__dirname + '/src/' + answers.es + '/**')
+            .pipe(template(answers))
+            .pipe(rename(function(file) {
+                if (file.basename[0] === '_') {
+                    file.basename = '.' + file.basename.slice(1);
+                }
+            }))
+            .pipe(conflict('./'))
+            .pipe(gulp.dest('./'))
+            .pipe(install())
+            .on('end', function() {
+                done();
+            })
+            .resume();
+    });
 });
