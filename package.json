@@ -6,23 +6,32 @@
   "keywords": [
     "slushgenerator"
   ],
+  "scripts": {
+    "test": "NODE_ENV=test mocha -R spec test/*_test.js",
+    "preversion": "npm test"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:afonsopacifer/slush-react-start.git"
   },
   "dependencies": {
-    "gulp": "~3.5.6",
-    "gulp-template": "~0.1.1",
-    "gulp-install": "~0.1.1",
-    "gulp-conflict": "~0.1.1",
-    "gulp-rename": "~1.2.0",
-    "underscore.string": "~2.3.3",
-    "inquirer": "~0.4.1"
+    "gulp": "^3.9.1",
+    "gulp-conflict": "^0.4.0",
+    "gulp-install": "^0.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-template": "^4.0.0",
+    "inquirer": "^1.2.2",
+    "underscore.string": "^3.3.4"
   },
   "author": {
     "name": "Afonso Pacifer",
     "email": "afonsopacifer@live.com",
     "url": "http://afonsopacifer.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.1.2",
+    "mock-gulp-dest": "^0.1.1",
+    "mockirer": "^2.0.0"
+  }
 }
