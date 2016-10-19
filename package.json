@@ -6,6 +6,10 @@
   "keywords": [
     "slushgenerator"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:afonsopacifer/slush-react-start.git"
+  },
   "dependencies": {
     "gulp": "~3.5.6",
     "gulp-template": "~0.1.1",
