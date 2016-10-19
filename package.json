@@ -11,13 +11,13 @@
     "preversion": "npm test"
   },
   "dependencies": {
-    "gulp": "^3.5.6",
-    "gulp-conflict": "^0.1.2",
-    "gulp-install": "^0.1.8",
+    "gulp": "^3.9.1",
+    "gulp-conflict": "^0.4.0",
+    "gulp-install": "^0.6.0",
     "gulp-rename": "^1.2.2",
-    "gulp-template": "^0.1.2",
-    "inquirer": "^0.4.1",
-    "underscore.string": "^2.3.3"
+    "gulp-template": "^4.0.0",
+    "inquirer": "^1.2.2",
+    "underscore.string": "^3.3.4"
   },
   "author": {
     "name": "Afonso Pacifer",
